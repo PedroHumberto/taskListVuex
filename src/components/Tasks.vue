@@ -2,8 +2,9 @@
     <div>
         <ul>
             <li v-for="task in tasks" :key="task">
+                {{ task }} 
                 <del-task :task='task'></del-task>
-                {{ task }}
+                
             </li>
             
         </ul>
@@ -30,6 +31,12 @@ export default {
 }
 </script>
 
-<style>
-
+<style scope>
+    li{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        margin-top: 10px;
+    }
 </style>

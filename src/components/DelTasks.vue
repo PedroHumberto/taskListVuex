@@ -18,12 +18,14 @@ export default {
     },
     methods: {
         delet(){
-            this.$store.commit('DEL_TASK', this.task)
+            this.$store.dispatch('removeTask', this.task)
         }
     },
 }
 </script>
 
-<style>
-
+<style scoped>
+    button{
+        margin-left: 10px;
+    }
 </style>

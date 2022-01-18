@@ -2,7 +2,6 @@
     <div>
         <input type="text" v-model="task">
         <button @click="add">Add</button>
-        
     </div>
 </template>
 
@@ -16,7 +15,7 @@ export default {
     methods: {
         add(){
             if(this.task != ''){
-                this.$store.commit('ADD_TASK', this.task)
+                this.$store.dispatch('addTask', this.task)
             }
             this.task =''
         }
