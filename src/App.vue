@@ -4,7 +4,7 @@
   <div>
     <div class="container">
       <div class="items">
-        <h1>{{ $store.state.nome }}</h1>
+        <h1>{{ name }}</h1>
         <add-task></add-task>
         <my-tasks></my-tasks>
         <search-bar></search-bar>
@@ -14,10 +14,13 @@
 </template>
 
 <script>
-import AddTask from './components/AddTask.vue'
-import Tasks from './components/Tasks.vue'
-import Search from './components/Search.vue'
+import AddTask from './components/AddTask.vue';
+import Tasks from './components/Tasks.vue';
+import Search from './components/Search.vue';
+import {mapState} from 'vuex';
+import {mapGetters} from 'vuex';
 export default {
+
     components:{
     'my-tasks': Tasks,
     'add-task': AddTask,
@@ -28,10 +31,14 @@ export default {
 
     }
   },
-  mounted(){
-    setTimeout(() => {this.$store.state.nome = 'Segundo Nome'
-    }, 1500 )
-  },  
+    computed: {
+    ...mapState(['name']),
+    ...mapGetters({
+        tasks: 'taskList'
+    })
+  },
+
+
 }
 </script>
 

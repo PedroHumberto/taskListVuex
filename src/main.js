@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import store from './store/raiz'
+import store from './store/root'
 
 new Vue({
   store,

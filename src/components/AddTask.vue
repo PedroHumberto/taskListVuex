@@ -1,11 +1,12 @@
 <template>
     <div>
         <input type="text" v-model="task">
-        <button @click="add">Add</button>
+        <button @click="submitTask">Add</button>
     </div>
 </template>
 
 <script>
+import {mapActions} from 'vuex'
 export default {
     data () {
         return {
@@ -13,9 +14,12 @@ export default {
         }
     },
     methods: {
-        add(){
+        ...mapActions({
+            add: 'addTask'
+        }),
+        submitTask(){
             if(this.task != ''){
-                this.$store.dispatch('addTask', this.task)
+                this.add(this.task)
             }
             this.task =''
         }

@@ -1,4 +1,4 @@
 export default {
-    tasks: [],
-    nome: 'Primeiro Nome',
+    name: 'VueJS',
 }
+

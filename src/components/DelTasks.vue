@@ -1,10 +1,11 @@
 <template>
     <div>
-        <button @click="delet()">Del</button>
+        <button @click="delet(task)">Del</button>
     </div>
 </template>
 
 <script>
+import {mapActions} from 'vuex'
 export default {
     props:{
         task:{
@@ -17,9 +18,9 @@ export default {
         }
     },
     methods: {
-        delet(){
-            this.$store.dispatch('removeTask', this.task)
-        }
+        ...mapActions({
+            delet: 'removeTask'
+        })
     },
 }
 </script>

@@ -4,14 +4,12 @@ export default {
         return list.reverse()
     },
     searchTask: state => term => {
-        let result = []
+        let result = ''
         if(term != ''){
-            for(let i=0; i < state.tasks.length; i++){
-                if(state.tasks[i].indexOf(term) > -1){
-                    result.push(state.tasks[i])
-                }
-            }
+            result = state.tasks.filter(item => item.toLowerCase().includes(term.toLowerCase()))
         }
         return result
+        
+     
     }
 }
