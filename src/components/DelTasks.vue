@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button @click="delet(task)">Del</button>
+        <button @click="delet(task)">Remove</button>
     </div>
 </template>
 
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style scoped>
-    button{
-        margin-left: 10px;
-    }
+div{
+    margin-bottom: 5px;
+}
 </style>

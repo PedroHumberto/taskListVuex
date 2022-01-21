@@ -1,10 +1,12 @@
 <template>
     <div>
-        <label for="search">Search For</label>
-        <input type="text" v-model="term">
-        <ul>
-            <li v-for="task in result(term)" :key="task">{{ task }}</li>
-        </ul>
+        <div class="items">
+            <label for="search"></label>
+            <input type="text" v-model="term" placeholder="Search For">
+            <ul>
+                <li v-for="task in result(term)" :key="task">{{ task }}</li>
+            </ul>
+        </div>
     </div>
 </template>
 
@@ -26,6 +28,16 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+input{
+    margin: 10px auto;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
 
 </style>

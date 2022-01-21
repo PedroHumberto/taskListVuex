@@ -1,69 +1,51 @@
 <template>
-
-
   <div>
+      <nav class="navbar">
+        <router-link to="/">Home</router-link>
+        <router-link to="/register">SingUp</router-link>
+      </nav>
     <div class="container">
-      <div class="items">
-        <h1>{{ name }}</h1>
-        <add-task></add-task>
-        <my-tasks></my-tasks>
-        <search-bar></search-bar>
-      </div>
+      <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script>
-import AddTask from './components/AddTask.vue';
-import Tasks from './components/Tasks.vue';
-import Search from './components/Search.vue';
-import {mapState} from 'vuex';
-import {mapGetters} from 'vuex';
 export default {
-
-    components:{
-    'my-tasks': Tasks,
-    'add-task': AddTask,
-    'search-bar': Search,
-  },
-  data () {
-    return {
-
-    }
-  },
-    computed: {
-    ...mapState(['name']),
-    ...mapGetters({
-        tasks: 'taskList'
-    })
-  },
-
 
 }
 </script>
 
-<style scoped>
+<style>
 
   *{
     padding: 0;
     margin: 0;
+  }
+  nav{
+    margin: 15px auto;
+    text-align: center;
+  }
+  .navbar a{
+    color: rgb(39, 139, 35);
+    font-size: 23px;
+    text-decoration: none;
+    margin-left: 15px;
+  }
+  h1{
+    margin-top: 15px;
+    text-align: center;
   }
   .container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    border: 10px solid blue;
-    margin: 15px auto;
-    height: 500px;
+    box-shadow: 4px 5px 3px rgba(92, 92, 92, 0.712);
+    margin: 40px auto;
+    width: 500px;
+    background: rgb(223, 231, 255);
   }
-  .items{
-    border: 5px solid black;
-    display: flex;
-    flex-direction: column;
-    height: 500px;
-  }
-  ul, li{
-    list-style: disc;
-  }
+
+
 </style>
