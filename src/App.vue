@@ -2,7 +2,7 @@
   <div>
       <nav class="navbar">
         <router-link to="/">Home</router-link>
-        <router-link to="/register">SingUp</router-link>
+        <router-link to="/contacts">Contacts</router-link>
       </nav>
     <div class="container">
       <router-view></router-view>
