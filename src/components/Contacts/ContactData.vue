@@ -1,5 +1,6 @@
 <template>
     <div>
+        
         <table>
             <tr>
                 <th>Name</th>
@@ -12,30 +13,30 @@
                 <td>
                     {{ contact.email }}
                 </td>
+                <del-contact :contact="contact"></del-contact>
             </tr>
         </table>
     </div>
 </template>
 
 <script>
-
+import delContact from './DelContact.vue'
 export default {
 
     components:{
-
+        'del-contact': delContact
     },
-
     computed:{
         contacts(){
             return this.$store.getters.contactList;
-        }
-    }
+        },
+
+    },
 }
 </script>
 
 <style scoped>
 div{
-    border: 2px solid blue;
     margin: 10px auto;
     
     
@@ -43,21 +44,21 @@ div{
 
 table {
   font-family: arial, sans-serif;
-  border: 2px solid blue;
+
   width: 100%;
   
 }
 
 td, th {
     
-    border: 1px solid #dddddd;
+    
     text-align: left;
     padding: 8px;
     
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background: rgb(241, 243, 252);
 }
 
 </style>

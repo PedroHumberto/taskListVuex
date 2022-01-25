@@ -5,6 +5,7 @@
             <input type="text" v-model="term" placeholder="Search For">
             <ul>
                 <li v-for="task in result(term)" :key="task">{{ task }}</li>
+                
             </ul>
         </div>
     </div>
@@ -13,7 +14,7 @@
 <script>
 import {mapGetters} from 'vuex'
 export default {
-    
+
     data () {
         return {
             term: ''
@@ -29,6 +30,7 @@ export default {
 </script>
 
 <style scoped>
+
 
 input{
     margin: 10px auto;

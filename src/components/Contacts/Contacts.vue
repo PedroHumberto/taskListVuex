@@ -20,7 +20,8 @@ export default {
 
     data() {
         return {
-            contact: '',
+            contact: [],
+            filter: '',
         }
     },
     methods: {
@@ -34,7 +35,6 @@ export default {
             this.contact = ''
         }
     },
-
 }
 </script>
 
