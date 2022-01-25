@@ -1,7 +1,8 @@
 <template>
     <div>
-        <label for="email">Email</label>
+        <label for="name">Name</label>
         <input type="text" v-model="contact.name"/>
+        <label for="email">Email</label>
         <input type="email" v-model="contact.email"/>
         <button @click="submitContact">Add</button>      
     </div>
@@ -17,7 +18,7 @@ export default {
                 name: '',
                 email:''
             },
-            email: '',
+            
         }
     },
     methods: {
