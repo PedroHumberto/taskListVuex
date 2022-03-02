@@ -1,8 +1,26 @@
-# lista-de-compra
+# Lista de Tarefas / Lista de Contados (Vuex)
 
-> A Vue.js project
+Projeto feito durante o estudo sobre Vuex.
 
-## Build Setup
+Nele é possivel adicionar/remover e pesquisar por tarefas.
+
+Adiconar/Remover um contato.
+
+Neste projeto é possivel realizar o controle dos estados das ações através do Vuex.
+
+Foi utilizado no projeto:
+
+Vuex
+Vue Rotas
+
+---
+
+<img src="./img/Contados.png">
+<img src="./img/tarefas.png">
+<img src="./img/Vuex.png">
+
+
+---
 
 ``` bash
 # install dependencies
